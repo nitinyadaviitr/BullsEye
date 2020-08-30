@@ -1,2 +1,2 @@
 # BullsEye
-iOS application
+Simple game for iOS.
