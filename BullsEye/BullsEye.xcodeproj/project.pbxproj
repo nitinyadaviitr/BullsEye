@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1ECFE0BC24FBF58300148252 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ECFE0BC24FBF58300148252 /* Bull's Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bull's Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ECFE0BF24FBF58300148252 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ECFE0C124FBF58300148252 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1ECFE0C324FBF58300148252 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		1ECFE0BD24FBF58300148252 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1ECFE0BC24FBF58300148252 /* BullsEye.app */,
+				1ECFE0BC24FBF58300148252 /* Bull's Eye.app */,
 				1ECFE0D224FBF58700148252 /* BullsEyeTests.xctest */,
 				1ECFE0DD24FBF58700148252 /* BullsEyeUITests.xctest */,
 			);
@@ -153,7 +153,7 @@
 			);
 			name = BullsEye;
 			productName = BullsEye;
-			productReference = 1ECFE0BC24FBF58300148252 /* BullsEye.app */;
+			productReference = 1ECFE0BC24FBF58300148252 /* Bull's Eye.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1ECFE0D124FBF58700148252 /* BullsEyeTests */ = {
@@ -444,7 +444,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BullsEye.BullsEye;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bull's Eye";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,7 +464,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BullsEye.BullsEye;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bull's Eye";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

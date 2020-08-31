@@ -16,22 +16,46 @@ struct ContentView: View {
     @State var score = 0
     @State var currentRound = 1
     
+    struct labelStyle : ViewModifier {
+        func body(content : Content) -> some View {
+            return content
+                .foregroundColor(Color.white)
+                .modifier(shadow())
+                .font(Font.custom("Arial Rounded MT Bold", size: 18))
+        }
+    }
+    struct numberStyle : ViewModifier {
+        func body(content : Content) -> some View {
+            return content
+                .foregroundColor(Color.yellow)
+                .modifier(shadow())
+                .font(Font.custom("Arial Rounded MT Bold", size: 22))
+        }
+    }
+    struct shadow : ViewModifier {
+        func body(content : Content) -> some View {
+            return content
+                .shadow(color: Color.black, radius: 7, x: 2, y: 2)
+        }
+    }
+    
+    
     var body: some View {
         VStack {
             Spacer()
             
             //Target Row
             HStack {
-                Text("Hit The Slider to :")
-                Text("\(self.target)")
+                Text("Hit The Slider to :").modifier(labelStyle())
+                Text("\(self.target)").modifier(numberStyle())
             }
             Spacer()
             
             //Slider Row
             HStack{
-                Text("1")
-                Slider(value: self.$sliderValue, in: 1...100)
-                Text("100")
+                Text("1").modifier(labelStyle())
+                Slider(value: self.$sliderValue, in: 1...100).accentColor(Color.green)
+                Text("100").modifier(labelStyle())
             }
             Spacer()
             
@@ -40,9 +64,7 @@ struct ContentView: View {
                 self.alertVisible = true
                 self.score += self.pointsForCurrentRound()
             }) {
-                Text(/*@START_MENU_TOKEN@*/"Hit Me!"/*@END_MENU_TOKEN@*/)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.black)
+                Text(/*@START_MENU_TOKEN@*/"Hit Me!"/*@END_MENU_TOKEN@*/).modifier(labelStyle())
             }
             .alert(isPresented: $alertVisible) { () -> Alert in
                 return Alert(title: Text("\(alertMessage())"), message: Text("Slider Value is \(sliderValueRounded()).\n" +
@@ -52,6 +74,7 @@ struct ContentView: View {
                     self.currentRound += 1
                     })
             }
+            .background(Image("Button"), alignment: .center)
             Spacer()
             
             //Score Row
@@ -59,21 +82,29 @@ struct ContentView: View {
                 Button(action: {
                     self.newGame()
                 }) {
-                   Text("Start Over")
-                }
+                    HStack{
+                        Image("StartOverIcon")
+                        Text("Refresh").modifier(labelStyle())
+                    }
+                }.background(Image("Button"), alignment: .center)
                 Spacer()
-                Text("Score:")
-                Text("\(score)")
+                Text("Score:").modifier(labelStyle())
+                Text("\(score)").modifier(numberStyle())
                 Spacer()
-                Text("Round:")
-                Text("\(currentRound)")
+                Text("Round:").modifier(labelStyle())
+                Text("\(currentRound)").modifier(numberStyle())
                 Spacer()
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Info")
-                }
+                    HStack{
+                        Image("InfoIcon")
+                        Text("Info").modifier(labelStyle())
+                    }
+                }.background(Image("Button"), alignment: .center)
             }
             .padding(.bottom , 20)
         }
+        .background(Image("Background"), alignment: .center)
+        .accentColor(Color.blue)
     }
     
     
