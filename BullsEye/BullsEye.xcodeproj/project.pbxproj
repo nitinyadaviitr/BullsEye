@@ -15,6 +15,7 @@
 		1ECFE0CC24FBF58700148252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECFE0CA24FBF58700148252 /* LaunchScreen.storyboard */; };
 		1ECFE0D724FBF58700148252 /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECFE0D624FBF58700148252 /* BullsEyeTests.swift */; };
 		1ECFE0E224FBF58700148252 /* BullsEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECFE0E124FBF58700148252 /* BullsEyeUITests.swift */; };
+		1ECFE0F024FD159700148252 /* AboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECFE0EF24FD159700148252 /* AboutPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1ECFE0DD24FBF58700148252 /* BullsEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ECFE0E124FBF58700148252 /* BullsEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeUITests.swift; sourceTree = "<group>"; };
 		1ECFE0E324FBF58700148252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ECFE0EF24FD159700148252 /* AboutPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				1ECFE0C524FBF58700148252 /* Assets.xcassets */,
 				1ECFE0CA24FBF58700148252 /* LaunchScreen.storyboard */,
 				1ECFE0CD24FBF58700148252 /* Info.plist */,
+				1ECFE0EF24FD159700148252 /* AboutPage.swift */,
 				1ECFE0C724FBF58700148252 /* Preview Content */,
 			);
 			path = BullsEye;
@@ -270,6 +273,7 @@
 				1ECFE0C024FBF58300148252 /* AppDelegate.swift in Sources */,
 				1ECFE0C224FBF58300148252 /* SceneDelegate.swift in Sources */,
 				1ECFE0C424FBF58300148252 /* ContentView.swift in Sources */,
+				1ECFE0F024FD159700148252 /* AboutPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

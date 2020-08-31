@@ -94,17 +94,26 @@ struct ContentView: View {
                 Text("Round:").modifier(labelStyle())
                 Text("\(currentRound)").modifier(numberStyle())
                 Spacer()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+//                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+//                    HStack{
+//                        Image("InfoIcon")
+//                        Text("Info").modifier(labelStyle())
+//                    }
+//                }.background(Image("Button"), alignment: .center)
+                
+                NavigationLink(destination : AboutPage()) {
                     HStack{
                         Image("InfoIcon")
                         Text("Info").modifier(labelStyle())
                     }
                 }.background(Image("Button"), alignment: .center)
+                
             }
             .padding(.bottom , 20)
         }
         .background(Image("Background"), alignment: .center)
         .accentColor(Color.blue)
+        .navigationBarTitle("BullsEye")
     }
     
     
