@@ -9,8 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State var alertVisible = false
     @State var sliderValue = 50.0
+    @State var target = Int.random(in: 1...100)
+    
     var body: some View {
         VStack {
             Spacer()
@@ -18,7 +21,7 @@ struct ContentView: View {
             //Target Row
             HStack {
                 Text("Hit The Slider to :")
-                Text(/*@START_MENU_TOKEN@*/"99"/*@END_MENU_TOKEN@*/)
+                Text("\(self.target)")
             }
             Spacer()
             
@@ -39,8 +42,9 @@ struct ContentView: View {
                     .foregroundColor(Color.black)
             }
             .alert(isPresented: $alertVisible) { () -> Alert in
-                var roundedValue : Int = Int(self.sliderValue.rounded())
-                return Alert(title: Text("Hola!"), message: Text("Slider Value is \(roundedValue)"), dismissButton: .default(Text("Dismiss!")))
+                return Alert(title: Text("Hola!"), message: Text("Slider Value is \(sliderValueRounded()).\n" +
+                    "You scored \(self.pointsForCurrentRound()) points in this round"
+                ), dismissButton: .default(Text("Dismiss!")))
             }
             Spacer()
             
@@ -63,6 +67,15 @@ struct ContentView: View {
             .padding(.bottom , 20)
         }
     }
+    
+    func sliderValueRounded() -> Int {
+        Int(self.sliderValue.rounded())
+    }
+    
+    func pointsForCurrentRound()-> Int{
+        100 - abs(sliderValueRounded() - self.target)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
